@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+  <!-- table area -->
+    <div >
+    <table id="table">
+        <tr>
+          <th>SL. NO.</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>City</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Mohammad</td>
+          <td>Parvez</td>
+          <td>Delhi</td>
+          <td>India</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Aman</td>
+          <td>khan</td>
+          <td>Ballia</td>
+          <td>India</td>
+        </tr>
+        <tr >
+            <td></td>
+            <td>Rahul</td>
+            <td>Verma</td>
+            <td>Lucknow</td>
+            <td>India</td>
+          </tr>
+          <tr>
+            <td ></td>
+            <td>Ashhad</td>
+            <td>Hasan</td>
+            <td>Delhi</td>
+            <td>India</td>
+          </tr>
+      </table>
+    </div>
+
+  <!-- input box -->
+    <div class="input-box">
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" ><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname"><br>
+            <label for="fname">City:</label><br>
+            <input type="text" id="city-name"><br>
+            <label for="lname">Country:</label><br>
+            <input type="text" id="country-name">
+        
+          </form>
+    <button type="button" onclick="addToTop()">Add to row to top</button>
+    <button onclick="addToBottom()">Add to row to bottom</button>
+    </div>
+
+      
+   <!-- code for adjusting serial number is purely css -->
+
+
+    <script>
+     
+    
+     function addToTop(){
+        var table = document.getElementById("table");
+        var firstName= document.getElementById("fname").value;
+        var lastName = document.getElementById("lname").value;
+        var cityName = document.getElementById("city-name").value;
+        var countryName = document.getElementById("country-name").value;
+       
+     var row = table.insertRow(1);
+
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5=row.insertCell(4);
+    cell1.innerHTML = "";
+    cell2.innerHTML = firstName;
+    cell3.innerHTML = lastName;
+    cell4.innerHTML = cityName;
+    cell5.innerHTML = countryName;
+
+     }
+
+
+     function addToBottom(){
+        var table = document.getElementById("table");
+        var firstName= document.getElementById("fname").value;
+        var lastName = document.getElementById("lname").value;
+        var cityName = document.getElementById("city-name").value;
+        var countryName = document.getElementById("country-name").value;
+       
+     var row = table.insertRow(table.rows.length);
+
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5=row.insertCell(4);
+    cell1.innerHTML = "";
+    cell2.innerHTML = firstName;
+    cell3.innerHTML = lastName;
+    cell4.innerHTML = cityName;
+    cell5.innerHTML = countryName;
+
+     }
+
+
+     
+
+    </script>
+</body>
+</html>
